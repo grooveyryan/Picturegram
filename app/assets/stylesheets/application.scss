@@ -19,9 +19,18 @@
 @import "bootstrap";
 
 body {
-  background-color: #fafafa;
-  font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background-position: center;
+    background-image: url('login.jpeg');
+    background-attachment: fixed;
 }
+
+/*.background-image{
+
+  background: url( asset-path('idea.jpeg') ) no-repeat;
+  background-size: 100% 100%;
+} */
+
+/* ## NAVBAR CUSTOMISATIONS ## */
 
 .navbar-brand {
   a {
@@ -38,49 +47,115 @@ body {
 }
 
 .navbar-container {
-  width: 640px;
+  width: 70%;
   margin: 0 auto;
 }
 
+/* ## POST CUSTOMISATIONS ## */
+
 .posts-wrapper {
-  padding-top: 40px;
+  padding-top: 50px;
+  padding-bottom: 5px;
   margin: 0 auto;
+
   max-width: 642px;
   width: 100%;
+  border-radius: 8px;
 }
 
 .post {
   background-color: #fff;
   border-color: #edeeee;
   border-style: solid;
-  border-radius: 3px;
+  border-radius: 10px;
   border-width: 1px;
-  margin-bottom: 60px;
-}
+  margin-bottom: 5px;
+  margin-top: 30px;
 
-.post-head {
-  height: 64px;
-  padding: 14px 20px;
-  color: #125688;
-  font-size: 15px;
-  line-height: 18px;
-  .thumbnail {}
-  .name {
-    display: block;
+  .post-head {
+    flex-direction: row;
+    height: 64px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 24px;
+    color: #125688;
+    font-size: 15px;
+    line-height: 18px;
+    .user-name, .time-ago {
+      display: inline;
+    }
+    .user-name {
+      font-weight: 500;
+    }
+    .time-ago {
+      color: #A5A7AA;
+      float: right;
+    }
+  }
+  .image {
+    border-bottom: 1px solid #eeefef;
+    border-top: 1px solid #eeefef;
   }
 }
 
-.image {
-  border-bottom: 1px solid #eeefef;
-  border-top: 1px solid #eeefef;
-}
+.post-bottom {
+  .user-name, .comment-content {
+    display: inline;
+  }
+  .caption {
+    margin-bottom: 7px;
+  }
+  .user-name {
+    font-weight: 500;
+    margin-right: 0.3em;
+    color: #125688;
+    font-size: 15px;
+  }
+  .user-name, .caption-content {
+    display: inline;
 
-.caption {
-  padding: 24px 24px;
+  }
+  #comment {
+    margin-top: 7px;
+    .user-name {
+      font-weight: 500;
+      margin-right: 0.3em;
+    }
+    .delete-comment {
+      float: right;
+      color: #515151;
+    }
+  }
+  margin-bottom: 7px;
+  padding-top: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 10px;
   font-size: 15px;
   line-height: 18px;
-
 }
+
+.comment_content {
+  font-size: 15px;
+  line-height: 18px;
+  border: medium none;
+  width: 100%;
+  color: #4B4F54;
+}
+
+.comment-like-form {
+  padding-top: 24px;
+  margin-top: 13px;
+  margin-left: 24px;
+  margin-right: 24px;
+  min-height: 68px;
+  align-items: center;
+  border-top: 1px solid #EEEFEF;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* ## Wrapper and styling for the new and edit views ## */
 
 .form-wrapper {
   width: 60%;
@@ -93,5 +168,120 @@ body {
 
 .edit-links {
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 100px;
+  color: white;
+  a {
+    color: white;
+  }
 }
+
+html {
+  height: 100%;
+}
+
+.registration-bg {
+  padding-top: 4em;
+  padding-bottom: 17em;
+  height: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: image-url('idea.jpeg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.log-in{
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  border: none;
+}
+
+.panel {
+  border-radius: 16px;
+
+}
+
+.panel-heading{
+  h1 {
+    text-align: center;
+  }
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.alert {
+  margin-bottom: 0px;
+}
+
+.login-bg {
+  padding-top: 4em;
+  padding-bottom: 17em;
+  height: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: image-url('idea.jpeg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+#image-preview {
+  margin: 0px auto;
+
+}
+
+#post_image {
+  padding: 1em;
+  margin: 0px auto;
+}
+
+#paginator {
+  color: #4090DB;
+  height: 120px;
+  width: 120px;
+  margin: 60px auto 40px;
+  position: relative;
+  display: table;
+  border: 2px solid white;
+  border-radius: 50%;
+  :hover {
+    border: 2px solid #2D6DA8;
+    border-radius: 50%;
+  }
+}
+
+#load_more {
+  color: white;
+  display: table-cell;
+  font-size: 12px;
+  padding: 0px 9px;
+  vertical-align: middle;
+  text-decoration: none;
+  a :hover {
+    border: 2px solid #2D6DA8;
+  }
+}
+
+.comments {
+  .paginator {
+    margin: 0.5em;
+    .more-comments {
+      color: #A5A7AA;
+    }
+  }
+}
+
+.time-ago {
+  margin-left: 20px;
+}
+
+/* #paginator {
+  color: #4090DB; */

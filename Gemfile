@@ -31,6 +31,8 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'jquery-rails'
 gem 'haml', '~> 5.0', '>= 5.0.4'
 gem 'devise', '~> 4.4', '>= 4.4.3'
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
